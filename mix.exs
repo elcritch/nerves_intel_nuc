@@ -41,6 +41,7 @@ defmodule NervesSystemINUC.MixProject do
   defp nerves_package do
     [
       type: :system,
+      build_runner:  Nerves.Artifact.BuildRunners.Docker,
       artifact_sites: [
         {:github_releases, "#{@github_organization}/#{@app}"}
       ],
@@ -120,7 +121,8 @@ defmodule NervesSystemINUC.MixProject do
     case System.get_env("BR2_PRIMARY_SITE") do
       nil -> []
       primary_site -> [make_args: ["BR2_PRIMARY_SITE=#{primary_site}"]]
-    end
+    end ++ [
+    ]
   end
 
   defp set_target() do
