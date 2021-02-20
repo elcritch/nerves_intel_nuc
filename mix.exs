@@ -1,8 +1,8 @@
-defmodule NervesSystemX8664.MixProject do
+defmodule NervesSystemINUC.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_x86_64
+  @github_organization "elcritch"
+  @app :nerves_system_inuc
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()

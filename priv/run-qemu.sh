@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Run a nerves_system_x86_64-based image in QEMU
+# Run a nerves_system_inuc-based image in QEMU
 #
 # Usage:
 #   run-qemu.sh [Path to .img file]

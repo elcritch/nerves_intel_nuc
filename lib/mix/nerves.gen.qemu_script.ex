@@ -5,7 +5,7 @@ defmodule Mix.Tasks.Nerves.Gen.QemuScript do
 
   @moduledoc """
   Generates a shell script for starting QEMU on a firmware image that
-  uses `nerves_system_x86_64`.
+  uses `nerves_system_inuc`.
 
   To use the generated script, first create the firmware image using:
 
@@ -42,7 +42,7 @@ defmodule Mix.Tasks.Nerves.Gen.QemuScript do
     end
 
     source =
-      :code.priv_dir(:nerves_system_x86_64)
+      :code.priv_dir(:nerves_system_inuc)
       |> to_string
       |> Path.join(@script_name)
 
